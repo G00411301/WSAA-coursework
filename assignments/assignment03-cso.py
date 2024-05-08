@@ -12,8 +12,9 @@ def getall():
     response = requests.get(url)
     return response.json()
 
-#Automatically run the function when the file is opened
+#Automatically run the function when the file is opened automatically
 if __name__ == "__main__":
     #Crete a .json file called cso.json and store it in the local directory. This section also converts the data received from a dictionary to json format
     with open("cso.json","wt") as fp:
         print(json.dumps(getall()), file = fp)
+
